@@ -63,6 +63,14 @@ const gameBoard = (() => {
 
 
     }
+    const checkIfTie = () => {
+        if (arr.includes(null)) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
     const generateBoard = () => {
         board.textContent = "";
         for (let i = 0; i < 9; i++) {
@@ -74,7 +82,14 @@ const gameBoard = (() => {
                             displayController.endGame()
                         }
                         else {
-                            displayController.endTurn();
+                            if (checkIfTie()) {
+                                displayController.endGameTie();
+
+                            }
+                            else  {
+                                displayController.endTurn();
+                            }
+                           
 
                         }
                         
@@ -97,6 +112,7 @@ const gameBoard = (() => {
     }
 
     return {
+        checkIfTie,
         checkIfWinner,
         generateBoard,
         markBoard,
@@ -159,6 +175,15 @@ const displayController = (() => {
     const checkIfGame = () => {
         return gameInProgress;
     }
+    const endGameTie = () => {
+        gameBoard.clearBoard();
+        gameBoard.generateBoard();
+        vicMessage.textContent = `Tie!`;
+        vicModal.style.display = 'block';
+        playerDisp.style.display = 'none';
+        
+        gameInProgress = false;
+    }
 
     const endGame = () => {
         gameBoard.clearBoard();
@@ -185,6 +210,7 @@ const displayController = (() => {
     }
 
     return {
+        endGameTie,
         endGame,
         checkIfGame,
         endTurn,
