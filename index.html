@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="player-modal">
+        <div class="player-message">
+
+        </div>
+        
+
+    </div>
+    
+    <div class="form-modal">
+        <button id="close-modal">X</button>
+        <div>
+            <form action="" class="player-form" id="playerForm">
+                <div>
+                    <label for="playerOne">Player One(X's): </label>
+                    <input type="text" id="playerOne" name="playerOne" required placeholder="Enter Name" maxlength="10">
+                </div>
+                <div>
+                    <label for="playerTwo">Player Two(O's): </label>
+                    <input type="text" id="playerTwo" name="playerTwo" required placeholder="Enter Name" maxlength="10">
+                </div>
+                
+                <button type="submit" id="submit-btn">Start</button>
+            </form>
+        </div>
+
+    </div>
+    <div class="victory-modal">
+        <div>
+            <div class="victory-message">
+            </div>
+            <button class="close-victory">Close</button>
+        </div>
+        
+
+
+    </div>
+    
+
+    <div class="outer-div">
+        <div class="header">
+            <div class="header-label">
+                Tic-Tac-Toe
+            </div>
+        </div>
+        <div class="main">
+            
+            <div class="board-holder">
+                <button class="start-btn">New Game</button>
+                <div class="board">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.outer-div {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+}
+.header {
+    background-color: wheat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid black;;
+}
+.main {
+    background-color: red;
+    padding: 30px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    
+}
+.player-modal {
+    display: none;
+    font-size: 40px;
+    width: 550px;
+    height: 200px;
+    background-color: blue;
+    border: 5px solid black;
+    color: white;
+    position: absolute;
+    left: 3%;
+    top: 50%; 
+    margin-left: -275;
+    margin-top: -100px;
+    border-radius: 30px;
+}
+.player-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.board-holder {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+
+}
+.board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: black;
+    height: 500px;
+    width: 500px;
+    gap: 5px;
+    border: 5px solid black;
+}
+.start-btn {
+    width: 100px;
+    height: 50px;
+}
+.header-label {
+    background-color: white;
+    width: 400px;
+    height: 125px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 5px solid black;
+}
+.cell {
+    justify-items : stretch;
+    align-items: stretch;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+.form-modal {
+    background-color: rgb(202, 202, 240);
+    display: none;
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -400px;
+    margin-top: -300px;
+    border-radius: 30px;
+    border: 5px solid black;
+    padding: 10px;
+    
+ }
+ .victory-modal {
+    background-color: rgb(202, 202, 240);
+    width: 400px;
+    height: 200px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -200px;
+    margin-top: -100px;
+    border-radius: 30px;
+    border: 5px solid black;
+    padding: 10px;
+    
+ }
+ .victory-modal > div {
+    position: relative;
+    top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 30px;
+
+ }
+ .close-victory {
+    height: 30px;
+    width: 100px;
+ }
+ 
+ 
+
+ .form-modal > div {
+    position: relative;
+    top: 15%;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+ }
+ #close-modal {
+    position: relative;
+    left: 90%;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+}
+input[type="text"] {
+    width: 200px;
+    height: 30px;
+}
+#submit-btn {
+    height: 30px;
+    width: 100px;
+}
